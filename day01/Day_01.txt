@@ -1,0 +1,41 @@
+## Day_01
+
+## Try_Hack_Me_Pracktice_linuxfundamentals_part1
+
+## Room_Link : https://tryhackme.com/room/linuxfundamentalspart1
+
+ 02. Navigating the Filesystem
+ 
+=   Essential commands for managing files and directories:
+
+--  ls → list contents
+-- cd → change directory
+-- cat → read file contents
+-- pwd → print working directory
+
+
+03. Searching for Files
+
+-- find → locate files by name or extension
+-- grep → search inside files for specific text
+
+
+04. Shell Operators
+
+-- & → run command in background
+-- && → chain commands
+-- > → redirect output to a file (overwrite)
+-- >> → append output to a file
+
+
+Sumarry : [
+
+= Understand what Linux is and where it’s used.
+= Run my first commands (echo, whoami).
+= Navigate and explore the filesystem (ls, cd, cat, pwd).
+= Search for files (find) and search inside files (grep).
+= Use shell operators to control command execution and redirect outputs.
+
+ ]
+ 
+ 
