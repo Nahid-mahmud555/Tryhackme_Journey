@@ -1,0 +1,63 @@
+## Day_02 
+
+##Try_Hack_Me Room Link : https://tryhackme.com/room/introtonetworking
+
+Networking & DNS Summary
+
+= Over the course of these tasks, you've explored the fundamentals of networking, focusing on the TCP/IP model, domain name resolution, and key networking tools.
+
+ 1. Networking Models
+
+= The TCP/IP model has 4 layers:
+= Application, Transport, Internet, and Network Interface.
+
+= It maps to the 7-layer OSI model, which is commonly used for learning.
+
+= The Transport Layer in both models handles protocols like TCP (connection-based) and UDP (connectionless).
+
+= TCP uses a three-way handshake (SYN, SYN-ACK, ACK) to establish a reliable connection.
+
+ 2. DNS (Domain Name System)
+
+= DNS translates domain names (e.g., google.com) into IP addresses.
+
+= The DNS lookup process involves several steps:
+
+= Hosts File – Local file checked first.
+
+= DNS Cache – Previously stored results.
+
+= Recursive DNS Server – Provided by your ISP or a public DNS like Google.
+
+= Root Name Servers
+
+= Top-Level Domain (TLD) Name Servers
+
+= Authoritative Name Servers – Store actual DNS records.
+
+ 3. Tools You Used
+
+= ping – Tests if a host is reachable.
+
+= traceroute – Shows the path your request takes to reach a server.
+
+= dig – Manually queries DNS records and shows TTL values (in seconds).
+
+= TTL (Time to Live) defines how long a DNS record stays cached (e.g., 86400 seconds = 24 hours).
+
+* Extra Knowledge
+
+= Google’s Public DNS servers:
+
+= Primary: 8.8.8.8
+
+= Secondary: 8.8.4.4
+
+= The registrant city for microsoft.com is Redmond.
+
+= The nearest golf course to Microsoft HQ is The Golf Club at Redmond Ridge.
+
+= WHOIS lookups help reveal domain registration details like registrant contact and tech email (msnhst@microsoft.com for Microsoft).
+
+
+## Finished
