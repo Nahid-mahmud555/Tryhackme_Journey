@@ -1,0 +1,70 @@
+Nmap Basics – Day Lesson Summary
+What I Learned Today
+
+1. Purpose of Nmap
+
+Nmap is a network scanning tool used for enumeration and reconnaissance.
+
+Helps identify live hosts, open ports, and services running on a target.
+
+2. Port Scanning
+
+Ports direct traffic to the correct application.
+
+Total ports: 65535, standard “well-known” ports are 0–1023.
+
+Common ports: HTTP(80), HTTPS(443), SMB(445), NETBIOS(139).
+
+3. Common Scan Types
+
+TCP Connect Scan (-sT) → Full 3-way handshake.
+
+SYN Scan (-sS) → Half-open / stealth scan.
+
+UDP Scan (-sU) → Stateless scan, slower.
+
+NULL (-sN), FIN (-sF), Xmas (-sX) → Stealthy, open|filtered detection.
+
+4. Useful Nmap Switches
+
+-Pn → Treat host as alive, bypass ICMP blocks.
+
+-p → Specify port(s) or ranges.
+
+-sV → Service version detection.
+
+-O → OS detection.
+
+--script=<category> → Run NSE scripts (e.g., ftp-anon).
+
+-v → Verbosity, -vv for more details.
+
+-oN/-oG/-oX → Save scan results in different formats.
+
+--reason → Shows why Nmap marked a port open/filtered.
+
+5. NSE Scripts
+
+Scripts are written in Lua.
+
+Categories: safe, vuln, exploit, auth, brute, discovery.
+
+Example: ftp-anon checks for anonymous FTP login.
+
+6. Firewall Evasion Techniques
+
+Fragment packets -f or --mtu <size>.
+
+Add delays --scan-delay <ms>.
+
+Append random data --data-length <num>.
+
+7. Key Takeaways
+
+Always start with enumeration.
+
+Use SYN scans for stealth and speed.
+
+UDP and stealth scans may show open|filtered.
+
+NSE scripts extend Nmap functionality for vulnerabilities and info gathering.
